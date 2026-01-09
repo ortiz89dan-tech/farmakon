@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmakón Dex | Guía de Antibióticos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FARMAKÓN DEX</h1>
+        <p>Diccionario Visual de Antibióticos - Facultad de Medicina</p>
+        <input type="text" id="searchInput" placeholder="Busca un fármaco, familia o enemigo..." onkeyup="searchCards()">
+    </header>
+
+    <main class="grid-container" id="cardGrid">
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="family-tag">Piedras Angulares</span>
+                <h2>Penicilina G & V</h2>
+            </div>
+            <div class="card-image">
+                <img src="assets/img/penicilina_g_v.png" alt="Penicilina G & V">
+            </div>
+            <div class="card-content">
+                <p><strong>Superpoder:</strong> Bloquean la transpeptidación (PBP) y activan el "botón de autodestrucción" bacteriano (lisis fulminante).</p>
+                <p><strong>Enemigos:</strong> S. pyogenes, T. pallidum (Sífilis) y N. meningitidis.</p>
+                <p><strong>Batallas:</strong> DOC para Sífilis. Indispensable en faringitis y meningitis.</p>
+                <p><strong>Debilidad:</strong> Hipersensibilidad clásica. En dosis masivas o falla renal: convulsiones.</p>
+                <div class="warning-box">
+                    <strong>Restricción:</strong> Prohibida en anafilaxia a betalactámicos. G es parenteral; V es oral.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="family-tag">Artillería de Rango Extendido</span>
+                <h2>Piperacilina/Tazobactam</h2>
+            </div>
+            <div class="card-image">
+                <img src="assets/img/pipera_tazo.png" alt="Piperacilina/Tazobactam">
+            </div>
+            <div class="card-content">
+                <p><strong>Superpoder:</strong> Piperacilina ataca la pared y el Tazobactam inactiva las betalactamasas enemigas.</p>
+                <p><strong>Enemigos:</strong> Pseudomonas aeruginosa, Klebsiella y anaerobios.</p>
+                <p><strong>Batallas:</strong> Infecciones nosocomiales graves, Sepsis y neumonías por ventilador.</p>
+                <p><strong>Debilidad:</strong> Interferencia plaquetaria. Con Vancomicina: riesgo de Lesión Renal Aguda (LRA).</p>
+                <div class="warning-box">
+                    <strong>Restricción:</strong> Requiere ajuste preciso en pacientes con falla renal (ERC).
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="family-tag">Escuadra Antiestafilococo</span>
+                <h2>Dicloxacilina</h2>
+            </div>
+            <div class="card-image">
+                <img src="assets/img/dicloxa.png" alt="Dicloxacilina">
+            </div>
+            <div class="card-content">
+                <p><strong>Superpoder:</strong> Impedimento estérico que la hace invulnerable a las penicilinasas estafilocócicas.</p>
+                <p><strong>Enemigos:</strong> Staphylococcus aureus (MSSA) y estreptococos.</p>
+                <p><strong>Batallas:</strong> Piel, tejidos blandos, celulitis y mastitis posparto.</p>
+                <p><strong>Debilidad:</strong> Hipersensibilidad. Riesgo de neutropenia o hepatitis (en parientes).</p>
+                <div class="warning-box">
+                    <strong>Restricción:</strong> Inútil contra MRSA. Excreción biliar (segura para el riñón).
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <span class="family-tag">Versátiles de Amplio Espectro</span>
+                <h2>Amoxicilina/Ampicilina</h2>
+            </div>
+            <div class="card-image">
+                <img src="assets/img/amoxi_ampi.png" alt="Amoxicilina/Ampicilina">
+            </div>
+            <div class="card-content">
+                <p><strong>Superpoder:</strong> Atraviesan mejor la membrana de Gram-negativos. Bloquean transpeptidación.</p>
+                <p><strong>Enemigos:</strong> H. influenzae, E. coli, Listeria y H. pylori.</p>
+                <p><strong>Batallas:</strong> Otitis media, sinusitis y erradicación de H. pylori. Ampicilina vs Listeria.</p>
+                <p><strong>Debilidad:</strong> Diarrea. Rash maculopapular no alérgico en Mononucleosis Infecciosa.</p>
+                <div class="warning-box">
+                    <strong>Restricción:</strong> No usar solas ante bacterias que producen betalactamasas.
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function searchCards() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('card');
+            for (let i = 0; i < cards.length; i++) {
+                let text = cards[i].innerText.toLowerCase();
+                cards[i].style.display = text.includes(input) ? "" : "none";
+            }
+        }
+    </script>
+</body>
+</html>
