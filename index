@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmakón Dex | Diccionario de Antibióticos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FARMAKÓN DEX</h1>
+        <p>Guía Visual de Farmacología Clínica</p>
+        <input type="text" id="searchInput" placeholder="Busca un fármaco, enemigo o batalla..." onkeyup="searchCards()">
+    </header>
+
+    <main class="grid-container" id="cardGrid">
+        
+        <div class="card antipared">
+            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+            <div class="card-body">
+                <div class="drug-name">PENICILINA G</div>
+                <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                <div class="stats">
+                    <p><strong>Superpoder:</strong> Bloquea la transpeptidación al unirse a las PBP y activa enzimas autolíticas para una lisis bacteriana fulminante.</p>
+                    <p><strong>Enemigos:</strong> Streptococcus (A, B, C, G), Treponema pallidum y Neisseria meningitidis.</p>
+                    <p><strong>Batallas:</strong> DOC para Sífilis, Faringitis estreptocócica y Meningitis.</p>
+                    <p><strong>Debilidad:</strong> Hipersensibilidad (anafilaxia), anemia hemolítica y nefritis.</p>
+                    <div class="restriction">
+                        <strong>Restricción:</strong> Solo vía parenteral (IV/IM). Requiere dosis frecuentes o de depósito.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card antipared">
+            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+            <div class="card-body">
+                <div class="drug-name">PENICILINA V</div>
+                <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                <div class="stats">
+                    <p><strong>Superpoder:</strong> Inhibidor de la síntesis de pared mediante el bloqueo de la formación de puentes de peptidoglicano.</p>
+                    <p><strong>Enemigos:</strong> Streptococcus pyogenes y otros estreptococos sensibles.</p>
+                    <p><strong>Batallas:</strong> Infecciones orofaríngeas leves a moderadas e infecciones menores de piel.</p>
+                    <p><strong>Debilidad:</strong> Molestias gastrointestinales (náuseas, diarrea) y reacciones alérgicas.</p>
+                    <div class="restriction">
+                        <strong>Restricción:</strong> Formulación oral estable en ácido. Ajustar en insuficiencia renal severa.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card antipared">
+            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+            <div class="card-body">
+                <div class="drug-name">AMOXICILINA</div>
+                <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                <div class="stats">
+                    <p><strong>Superpoder:</strong> Inhibe la síntesis de pared; frecuentemente protegida por Ácido Clavulánico contra betalactamasas.</p>
+                    <p><strong>Enemigos:</strong> S. pneumoniae, H. influenzae, Listeria y H. pylori.</p>
+                    <p><strong>Batallas:</strong> Otitis media, sinusitis, neumonía de la comunidad y erradicación de H. pylori.</p>
+                    <p><strong>Debilidad:</strong> Diarrea y rash cutáneo (ojo en mononucleosis).</p>
+                    <div class="restriction">
+                        <strong>Restricción:</strong> Categoría B en el embarazo. Alta biodisponibilidad oral.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card antipared">
+            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+            <div class="card-body">
+                <div class="drug-name">AMPICILINA</div>
+                <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                <div class="stats">
+                    <p><strong>Superpoder:</strong> Bloqueo de la transpeptidasa. Mejor penetración en membrana de Gram-negativos.</p>
+                    <p><strong>Enemigos:</strong> Listeria monocytogenes, Enterococcus spp y Proteus mirabilis.</p>
+                    <p><strong>Batallas:</strong> Meningitis por Listeria e infecciones urinarias.</p>
+                    <p><strong>Debilidad:</strong> Erupción maculopapular no alérgica y colitis pseudomembranosa.</p>
+                    <div class="restriction">
+                        <strong>Restricción:</strong> Los alimentos bajan su absorción oral. Ajuste en falla renal.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card antipared">
+            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+            <div class="card-body">
+                <div class="drug-name">DICLOXACILINA</div>
+                <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                <div class="stats">
+                    <p><strong>Superpoder:</strong> Estructura tipo "tanque" resistente a las penicilinasas estafilocócicas.</p>
+                    <p><strong>Enemigos:</strong> S. aureus meticilino-sensible (MSSA) y S. epidermidis.</p>
+                    <p><strong>Batallas:</strong> Infecciones de piel, impétigo y celulitis estafilocócica.</p>
+                    <p><strong>Debilidad:</strong> Molestias gastrointestinales e hipersensibilidad.</p>
+                    <div class="restriction">
+                        <strong>Restricción:</strong> Inútil contra MRSA y Enterococos. Uso oral disponible.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card antipared">
+            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+            <div class="card-body">
+                <div class="drug-name">PIPERACILINA</div>
+                <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                <div class="stats">
+                    <p><strong>Superpoder:</strong> Espectro extendido; con Tazobactam derriba defensas de Gram-negativos difíciles.</p>
+                    <p><strong>Enemigos:</strong> Pseudomonas aeruginosa, Klebsiella y Bacteroides fragilis.</p>
+                    <p><strong>Batallas:</strong> Neumonía nosocomial, sepsis grave y pie diabético.</p>
+                    <p><strong>Debilidad:</strong> Nefrotoxicidad (con Vancomicina)
