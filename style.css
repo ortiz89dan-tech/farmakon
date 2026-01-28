@@ -1,0 +1,131 @@
+:root {
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --primary-text: #2c3e50;
+    --restriction-bg: #fff5f5;
+    --restriction-border: #e74c3c;
+    
+    /* Colores por Grupo */
+    --color-antipared: #2980b9;    /* Azul */
+    --color-membrana: #8e44ad;     /* Morado */
+    --color-metabolitos: #f39c12;  /* Naranja/Amarillo */
+    --color-adn-ruptura: #d35400;  /* Naranja Oscuro */
+    --color-adn-girasa: #c0392b;   /* Rojo Sangre */
+    --color-30s: #27ae60;          /* Verde */
+    --color-50s: #16a085;          /* Turquesa/Verde Mar */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    color: var(--primary-text);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#searchInput {
+    padding: 12px 20px;
+    width: 300px;
+    border-radius: 25px;
+    border: 2px solid #bdc3c7;
+    outline: none;
+    transition: 0.3s;
+}
+
+#searchInput:focus {
+    border-color: var(--color-antipared);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+}
+
+/* Encabezado Superior (Nivel 1) */
+.card-top-header {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Colores Dinámicos según la Clase del Grupo */
+.card.antipared .card-top-header { background-color: var(--color-antipared); }
+.card.membrana .card-top-header { background-color: var(--color-membrana); }
+.card.metabolitos .card-top-header { background-color: var(--color-metabolitos); }
+.card.adn-ruptura .card-top-header { background-color: var(--color-adn-ruptura); }
+.card.adn-girasa .card-top-header { background-color: var(--color-adn-girasa); }
+.card.bloqueo-30s .card-top-header { background-color: var(--color-30s); }
+.card.interferencia-50s .card-top-header { background-color: var(--color-50s); }
+
+.card-body {
+    padding: 20px;
+}
+
+/* Nombre del Fármaco (Nivel 2) */
+.drug-name {
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Asignar color de texto según grupo al nombre */
+.card.antipared .drug-name { color: var(--color-antipared); }
+.card.bloqueo-30s .drug-name { color: var(--color-30s); }
+/* ... (Se puede repetir para todos, o dejar un color neutro) */
+
+/* Clase (Nivel 3) */
+.drug-class {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    font-style: italic;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Cuerpo de Info (Nivel 4) */
+.stats p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.stats strong {
+    color: #34495e;
+}
+
+/* Restricción (Nivel 5) */
+.restriction {
+    background-color: var(--restriction-bg);
+    border-left: 5px solid var(--restriction-border);
+    padding: 12px;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    border-radius: 4px;
+    color: #c0392b;
+}
