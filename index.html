@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmakón Dex</title>
+    <title>Farmakón Dex | Diccionario de Antibióticos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>FARMAKÓN DEX</h1>
-        <p>Consulta Visual de Antibióticos</p>
-        <input type="text" id="searchInput" placeholder="Busca un fármaco o bacteria..." onkeyup="searchCards()">
+        <p>Guía Visual de Farmacología Clínica</p>
+        <input type="text" id="searchInput" placeholder="Busca un fármaco, enemigo o batalla..." onkeyup="searchCards()">
     </header>
 
     <main class="grid-container" id="cardGrid">
@@ -20,12 +20,15 @@
             <div class="card-body">
                 <div class="drug-name">PENICILINA G</div>
                 <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
                 <div class="stats">
-                    <p><strong>Superpoder:</strong> Inhibe la síntesis de pared al unirse a PBPs y activa la lisis bacteriana fulminante.</p>
+                    <p><strong>Superpoder:</strong> Inhibe la síntesis de pared celular al unirse a las PBPs, bloqueando la transpeptidación y activando enzimas autolíticas para una lisis bacteriana fulminante.</p>
                     <p><strong>Enemigos:</strong> Streptococcus (A, B, C, G), Treponema pallidum y Neisseria meningitidis.</p>
                     <p><strong>Batallas:</strong> DOC para Sífilis, Faringitis estreptocócica y Meningitis.</p>
                     <p><strong>Debilidad:</strong> Hipersensibilidad (anafilaxia), anemia hemolítica y nefritis.</p>
-                    <div class="restriction"><strong>Restricción:</strong> Solo parenteral (IV/IM). Eliminación renal rápida.</div>
+                    <div class="restriction">
+                        <strong>Restricción:</strong> Solo vía parenteral (IV/IM). Eliminación renal rápida (requiere dosis frecuentes o de depósito).
+                    </div>
                 </div>
             </div>
         </div>
@@ -35,12 +38,15 @@
             <div class="card-body">
                 <div class="drug-name">PENICILINA V</div>
                 <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
                 <div class="stats">
-                    <p><strong>Superpoder:</strong> Bloqueo de la formación de puentes de peptidoglicano en la pared celular.</p>
+                    <p><strong>Superpoder:</strong> Inhibe la síntesis de pared celular al unirse a las PBPs, bloqueando la transpeptidación y activando enzimas autolíticas para una lisis bacteriana fulminante.</p>
                     <p><strong>Enemigos:</strong> Streptococcus pyogenes y otros estreptococos sensibles.</p>
-                    <p><strong>Batallas:</strong> Infecciones orofaríngeas leves e infecciones menores de piel.</p>
-                    <p><strong>Debilidad:</strong> Náuseas, diarrea y reacciones alérgicas.</p>
-                    <div class="restriction"><strong>Restricción:</strong> Estable en ácido (vía oral). Ajustar en insuficiencia renal severa.</div>
+                    <p><strong>Batallas:</strong> Infecciones orofaríngeas leves a moderadas e infecciones menores de piel.</p>
+                    <p><strong>Debilidad:</strong> Molestias gastrointestinales (náuseas, diarrea) y reacciones alérgicas.</p>
+                    <div class="restriction">
+                        <strong>Restricción:</strong> Formulación oral estable en ácido. Ajustar en insuficiencia renal severa.
+                    </div>
                 </div>
             </div>
         </div>
@@ -50,12 +56,15 @@
             <div class="card-body">
                 <div class="drug-name">AMOXICILINA</div>
                 <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
                 <div class="stats">
-                    <p><strong>Superpoder:</strong> Inhibe la transpeptidación; suele protegerse con Ácido Clavulánico.</p>
+                    <p><strong>Superpoder:</strong> Base Penicilina + <strong>Diseño de Amplio Espectro:</strong> Estructura que permite atravesar mejor la membrana externa de Gram-negativos; suele protegerse con Ácido Clavulánico contra betalactamasas.</p>
                     <p><strong>Enemigos:</strong> S. pneumoniae, H. influenzae, Listeria y H. pylori.</p>
-                    <p><strong>Batallas:</strong> Otitis media, sinusitis, neumonía y erradicación de H. pylori.</p>
-                    <p><strong>Debilidad:</strong> Diarrea y rash cutáneo (ojo en mononucleosis).</p>
-                    <div class="restriction"><strong>Restricción:</strong> Categoría B en embarazo. Alta biodisponibilidad oral.</div>
+                    <p><strong>Batallas:</strong> Otitis media, sinusitis, neumonía de la comunidad y erradicación de H. pylori.</p>
+                    <p><strong>Debilidad:</strong> Diarrea (más común con Clavulánico) y rash cutáneo (ojo en mononucleosis).</p>
+                    <div class="restriction">
+                        <strong>Restricción:</strong> Alta biodisponibilidad oral. Los alimentos no interfieren significativamente.
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,12 +74,15 @@
             <div class="card-body">
                 <div class="drug-name">AMPICILINA</div>
                 <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
                 <div class="stats">
-                    <p><strong>Superpoder:</strong> Bloqueo de la transpeptidasa. Diseño con mejor entrada a Gram-negativos.</p>
+                    <p><strong>Superpoder:</strong> Base Penicilina + <strong>Diseño de Amplio Espectro:</strong> Modificación que facilita la entrada a través de porinas en Gram-negativos; se combina con Sulbactam.</p>
                     <p><strong>Enemigos:</strong> Listeria monocytogenes, Enterococcus spp y Proteus mirabilis.</p>
                     <p><strong>Batallas:</strong> Meningitis por Listeria e infecciones urinarias.</p>
-                    <p><strong>Debilidad:</strong> Erupción maculopapular no alérgica y colitis pseudomembranosa.</p>
-                    <div class="restriction"><strong>Restricción:</strong> Los alimentos bajan su absorción oral. Ajuste en falla renal.</div>
+                    <p><strong>Debilidad:</strong> Erupción maculopapular (rash) no alérgica muy frecuente y colitis pseudomembranosa.</p>
+                    <div class="restriction">
+                        <strong>Restricción:</strong> Los alimentos disminuyen su absorción oral. Requiere ajuste en falla renal.
+                    </div>
                 </div>
             </div>
         </div>
@@ -80,12 +92,15 @@
             <div class="card-body">
                 <div class="drug-name">DICLOXACILINA</div>
                 <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
                 <div class="stats">
-                    <p><strong>Superpoder:</strong> Resistente a las penicilinasas estafilocócicas por impedimento estérico.</p>
-                    <p><strong>Enemigos:</strong> Staphylococcus aureus (MSSA) y S. epidermidis.</p>
+                    <p><strong>Superpoder:</strong> Base Penicilina + <strong>Diseño Antienzimático:</strong> Estructura con impedimento estérico que la hace invulnerable a las penicilinasas (betalactamasas) estafilocócicas.</p>
+                    <p><strong>Enemigos:</strong> S. aureus meticilino-sensible (MSSA) y S. epidermidis.</p>
                     <p><strong>Batallas:</strong> Infecciones de piel, impétigo y celulitis estafilocócica.</p>
                     <p><strong>Debilidad:</strong> Molestias gastrointestinales e hipersensibilidad.</p>
-                    <div class="restriction"><strong>Restricción:</strong> Inútil contra MRSA. Excreción biliar (segura para riñón).</div>
+                    <div class="restriction">
+                        <strong>Restricción:</strong> Inútil contra MRSA y Enterococos. Excreción biliar (segura para el riñón).
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,12 +110,15 @@
             <div class="card-body">
                 <div class="drug-name">PIPERACILINA</div>
                 <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
                 <div class="stats">
-                    <p><strong>Superpoder:</strong> Espectro extendido; con Tazobactam derriba defensas de Gram-negativos difíciles.</p>
+                    <p><strong>Superpoder:</strong> Base Penicilina + <strong>Diseño de Espectro Extendido:</strong> Capacidad para derribar defensas de Gram-negativos difíciles; se combina con Tazobactam.</p>
                     <p><strong>Enemigos:</strong> Pseudomonas aeruginosa, Klebsiella y Bacteroides fragilis.</p>
                     <p><strong>Batallas:</strong> Neumonía nosocomial, sepsis grave y pie diabético.</p>
-                    <p><strong>Debilidad:</strong> Nefrotoxicidad (con Vancomicina) y disfunción plaquetaria.</p>
-                    <div class="restriction"><strong>Restricción:</strong> IV exclusivo. Requiere ajuste en insuficiencia renal.</div>
+                    <p><strong>Debilidad:</strong> Nefrotoxicidad (potenciada con Vancomicina) y disfunción plaquetaria.</p>
+                    <div class="restriction">
+                        <strong>Restricción:</strong> Solo vía parenteral (IV). Requiere ajuste en insuficiencia renal.
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,12 +128,15 @@
             <div class="card-body">
                 <div class="drug-name">TICARCILINA</div>
                 <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
                 <div class="stats">
-                    <p><strong>Superpoder:</strong> Carboxipenicilina especializada en Gram-negativos resistentes.</p>
+                    <p><strong>Superpoder:</strong> Base Penicilina + <strong>Diseño de Espectro Extendido:</strong> Carboxipenicilina con actividad reforzada contra Gram-negativos resistentes.</p>
                     <p><strong>Enemigos:</strong> Pseudomonas aeruginosa, Enterobacter y Proteus.</p>
                     <p><strong>Batallas:</strong> Sepsis por Gram-negativos e infecciones nosocomiales graves.</p>
                     <p><strong>Debilidad:</strong> Sobrecarga de sodio (hipopotasemia) y riesgo de sangrado.</p>
-                    <div class="restriction"><strong>Restricción:</strong> Menor actividad contra Pseudomonas que Piperacilina. IV exclusivo.</div>
+                    <div class="restriction">
+                        <strong>Restricción:</strong> Menor actividad contra Pseudomonas que la Piperacilina. IV exclusivo.
+                    </div>
                 </div>
             </div>
         </div>
