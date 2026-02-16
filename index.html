@@ -3,383 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmakón Dex | Penicilinas</title>
+    <title>Farmakón Dex</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>FARMAKÓN DEX</h1>
-        <p>Guía Visual de Farmacología Clínica</p>
+        <p>Diccionario Visual de Antibióticos</p>
         <input type="text" id="searchInput" placeholder="Busca un fármaco, enemigo o batalla..." onkeyup="searchCards()">
     </header>
 
-    <main class="grid-container" id="cardGrid">
+    <main id="mainContainer">
         
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">PENICILINA G</div>
-                <div class="drug-class">Penicilinas (Betalactámicos)</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Se une a las proteínas de unión a penicilina (PBP), inhibiendo la transpeptidasa y bloqueando el entrecruzamiento de peptidoglicanos en la pared celular.</p>
-                    <p><strong>Mejora de Diseño:</strong> Prototipo original; inestable en ácido gástrico (requiere vía parenteral IV/IM).</p>
-                    <p><strong>Enemigos:</strong> S. pyogenes, Treponema pallidum y Neisseria meningitidis.</p>
-                    <p><strong>Batallas:</strong> Elección para Sífilis, Faringitis estreptocócica y Gangrena gaseosa (C. perfringens).</p>
-                    <p><strong>Debilidad:</strong> Hipersensibilidad (anafilaxia), anemia hemolítica y convulsiones (en dosis altas/falla renal).</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Eliminación renal rápida. Requiere ajuste en falla renal y uso de formas de depósito (Benzatina).
-                    </div>
-                </div>
+        <div class="group-container">
+            <div class="group-header" onclick="toggleGroup('contentAntipared')">
+                ESCUADRA ANTIPARED CELULAR <span>▼</span>
             </div>
-        </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">PENICILINA V</div>
-                <div class="drug-class">Penicilinas (Betalactámicos)</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Se une a las proteínas de unión a penicilina (PBP), inhibiendo la transpeptidasa y bloqueando el entrecruzamiento de peptidoglicanos en la pared celular.</p>
-                    <p><strong>Mejora de Diseño:</strong> Modificación estructural que le confiere estabilidad en medio ácido, permitiendo su absorción oral.</p>
-                    <p><strong>Enemigos:</strong> Streptococcus pyogenes y otros estreptococos sensibles.</p>
-                    <p><strong>Batallas:</strong> Infecciones orofaríngeas (faringitis) y menores de piel.</p>
-                    <p><strong>Debilidad:</strong> Molestias gastrointestinales y reacciones alérgicas.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Solo vía oral; menor biodisponibilidad que amoxicilina (se afecta por alimentos).
+            <div class="group-content" id="contentAntipared">
+                
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">PENICILINA G</div>
+                        <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                        <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Inhibe la transpeptidasa y bloquea el entrecruzamiento de peptidoglicanos en la pared celular.</p>
+                            <p><strong>Mejora de Diseño:</strong> Prototipo original; inestable en ácido gástrico (requiere vía parenteral IV/IM).</p>
+                            <p><strong>Enemigos:</strong> S. pyogenes, Treponema pallidum y Neisseria meningitidis.</p>
+                            <p><strong>Batallas:</strong> Sífilis, Faringitis estreptocócica y Gangrena gaseosa.</p>
+                            <div class="restriction"><strong>Restricción:</strong> Eliminación renal rápida. Requiere ajuste en falla renal.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">AMOXICILINA</div>
-                <div class="drug-class">Aminopenicilinas</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Se une a las proteínas de unión a penicilina (PBP), inhibiendo la transpeptidasa y bloqueando el entrecruzamiento de peptidoglicanos en la pared celular.</p>
-                    <p><strong>Mejora de Diseño:</strong> El grupo amino mejora la penetración por porinas Gram-negativas. Alta biodisponibilidad oral (no le afectan los alimentos).</p>
-                    <p><strong>Enemigos:</strong> S. pneumoniae, H. influenzae (con inhibidor), H. pylori y Listeria.</p>
-                    <p><strong>Batallas:</strong> Otitis media, sinusitis, neumonía y erradicación de H. pylori.</p>
-                    <p><strong>Debilidad:</strong> Diarrea y rash cutáneo no alérgico (ojo en mononucleosis).</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Requiere ajuste en falla renal. Suele escoltarse con Ácido Clavulánico.
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">PENICILINA V</div>
+                        <div class="drug-class">Penicilinas (Betalactámicos)</div>
+                        <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Inhibe la transpeptidasa y bloquea el entrecruzamiento de peptidoglicanos en la pared celular.</p>
+                            <p><strong>Mejora de Diseño:</strong> Estabilidad en medio ácido, permitiendo su absorción oral.</p>
+                            <p><strong>Enemigos:</strong> Streptococcus pyogenes y otros estreptococos sensibles.</p>
+                            <p><strong>Batallas:</strong> Infecciones orofaríngeas y menores de piel.</p>
+                            <div class="restriction"><strong>Restricción:</strong> Solo vía oral; menor biodisponibilidad que amoxicilina.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">AMPICILINA</div>
-                <div class="drug-class">Aminopenicilinas</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Se une a las proteínas de unión a penicilina (PBP), inhibiendo la transpeptidasa y bloqueando el entrecruzamiento de peptidoglicanos en la pared celular.</p>
-                    <p><strong>Mejora de Diseño:</strong> Estructura que amplía el espectro hacia bacilos Gram-negativos en comparación con Penicilina G.</p>
-                    <p><strong>Enemigos:</strong> Listeria monocytogenes, Enterococcus spp y Proteus mirabilis.</p>
-                    <p><strong>Batallas:</strong> Meningitis y sepsis por Listeria; infecciones por enterococos.</p>
-                    <p><strong>Debilidad:</strong> Rash maculopapular (frecuente, no siempre alérgico) y colitis pseudomembranosa.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Absorción oral pobre (mejor IV). Requiere ajuste en falla renal.
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">AMOXICILINA</div>
+                        <div class="drug-class">Aminopenicilinas</div>
+                        <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Inhibe la transpeptidasa y bloquea el entrecruzamiento de peptidoglicanos en la pared celular.</p>
+                            <p><strong>Mejora de Diseño:</strong> Grupo amino mejora penetración en Gram-negativos. Alta biodisponibilidad oral.</p>
+                            <p><strong>Enemigos:</strong> S. pneumoniae, H. influenzae, H. pylori y Listeria.</p>
+                            <p><strong>Batallas:</strong> Otitis media, sinusitis y erradicación de H. pylori.</p>
+                            <div class="restriction"><strong>Restricción:</strong> Requiere ajuste en falla renal.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">DICLOXACILINA</div>
-                <div class="drug-class">Penicilinas Resistentes a Penicilinasas</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Se une a las proteínas de unión a penicilina (PBP), inhibiendo la transpeptidasa y bloqueando el entrecruzamiento de peptidoglicanos en la pared celular.</p>
-                    <p><strong>Mejora de Diseño:</strong> Cadenas laterales voluminosas que impiden estéricamente la unión de penicilinasas estafilocócicas.</p>
-                    <p><strong>Enemigos:</strong> Staphylococcus aureus (MSSA) y estreptococos.</p>
-                    <p><strong>Batallas:</strong> Infecciones de piel y tejidos blandos, impétigo y celulitis estafilocócica.</p>
-                    <p><strong>Debilidad:</strong> Molestias gastrointestinales e hipersensibilidad.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Inútil contra MRSA. Disponible para uso oral.
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">AMPICILINA</div>
+                        <div class="drug-class">Aminopenicilinas</div>
+                        <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Inhibe la transpeptidasa y bloquea el entrecruzamiento de peptidoglicanos en la pared celular.</p>
+                            <p><strong>Mejora de Diseño:</strong> Amplía espectro hacia bacilos Gram-negativos frente a Penicilina G.</p>
+                            <p><strong>Enemigos:</strong> Listeria monocytogenes, Enterococcus spp y Proteus mirabilis.</p>
+                            <p><strong>Batallas:</strong> Meningitis y sepsis por Listeria; infecciones por enterococos.</p>
+                            <div class="restriction"><strong>Restricción:</strong> Absorción oral pobre (mejor IV). Ajuste en falla renal.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">PIPERACILINA</div>
-                <div class="drug-class">Ureidopenicilinas (Espectro Extendido)</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Se une a las proteínas de unión a penicilina (PBP), inhibiendo la transpeptidasa y bloqueando el entrecruzamiento de peptidoglicanos en la pared celular.</p>
-                    <p><strong>Mejora de Diseño:</strong> Estructura modificada para penetrar y unirse a PBPs de Gram-negativos difíciles, ampliando el espectro significativamente.</p>
-                    <p><strong>Enemigos:</strong> Pseudomonas aeruginosa, Klebsiella pneumoniae y Enterobacter.</p>
-                    <p><strong>Batallas:</strong> Neumonía hospitalaria, sepsis grave y neutropenia febril.</p>
-                    <p><strong>Debilidad:</strong> Disfunción plaquetaria y nefrotoxicidad (riesgo aumentado si se combina con Vancomicina).</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Solo vía parenteral (IV). Requiere ajuste renal; sinergia con aminoglucósidos.
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">DICLOXACILINA</div>
+                        <div class="drug-class">Penicilinas Resistentes a Penicilinasas</div>
+                        <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Inhibe la transpeptidasa y bloquea el entrecruzamiento de peptidoglicanos en la pared celular.</p>
+                            <p><strong>Mejora de Diseño:</strong> Impedimento estérico que la hace invulnerable a penicilinasas estafilocócicas.</p>
+                            <p><strong>Enemigos:</strong> Staphylococcus aureus (MSSA) y estreptococos.</p>
+                            <p><strong>Batallas:</strong> Infecciones de piel y tejidos blandos; celulitis estafilocócica.</p>
+                            <div class="restriction"><strong>Restricción:</strong> Inútil contra MRSA. Uso oral disponible.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">TICARCILINA</div>
-                <div class="drug-class">Carboxipenicilinas (Espectro Extendido)</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Se une a las proteínas de unión a penicilina (PBP), inhibiendo la transpeptidasa y bloqueando el entrecruzamiento de peptidoglicanos en la pared celular.</p>
-                    <p><strong>Mejora de Diseño:</strong> El grupo carboxilo mejora la actividad contra Pseudomonas y Proteus frente a penicilinas naturales.</p>
-                    <p><strong>Enemigos:</strong> Pseudomonas aeruginosa, Enterobacter y Proteus.</p>
-                    <p><strong>Batallas:</strong> Sepsis por Gram-negativos e infecciones nosocomiales graves.</p>
-                    <p><strong>Debilidad:</strong> Sobrecarga de sodio (riesgo de falla cardíaca), hipopotasemia y sangrado.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Solo parenteral. Dosis altas pueden causar convulsiones. Uso limitado frente a Piperacilina.
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">PIPERACILINA</div>
+                        <div class="drug-class">Ureidopenicilinas</div>
+                        <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Inhibe la transpeptidasa y bloquea el entrecruzamiento de peptidoglicanos en la pared celular.</p>
+                            <p><strong>Mejora de Diseño:</strong> Estructura modificada para penetrar PBPs de Gram-negativos difíciles.</p>
+                            <p><strong>Enemigos:</strong> Pseudomonas aeruginosa, Klebsiella y Enterobacter.</p>
+                            <p><strong>Batallas:</strong> Neumonía hospitalaria y sepsis grave.</p>
+                            <div class="restriction"><strong>Restricción:</strong> Solo IV. Sinergia con aminoglucósidos.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-<div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">IMIPENEM / CILASTATINA</div>
-                <div class="drug-class">Carbapenémicos (Betalactámicos)</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Se une a las PBPs, inhibiendo la transpeptidasa y bloqueando el entrecruzamiento de peptidoglicanos, provocando lisis y muerte bacteriana.</p>
-                    <p><strong>Mejora de Diseño:</strong> Resistencia extrema a betalactamasas. Se escolta con <strong>Cilastatina</strong> para evitar su degradación por la dipeptidasa renal y prevenir nefrotoxicidad.</p>
-                    <p><strong>Enemigos:</strong> Pseudomonas aeruginosa, Acinetobacter, Enterobacteriaceae (ESBL+) y anaerobios (B. fragilis).</p>
-                    <p><strong>Batallas:</strong> Infecciones nosocomiales graves, sepsis y neutropenia febril.</p>
-                    <p><strong>Debilidad:</strong> Elevado riesgo de convulsiones (SNC), náuseas y vómitos.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Ajuste renal obligatorio. Reduce niveles de Ácido Valproico (riesgo de crisis epilépticas).
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">MEROPENEM</div>
-                <div class="drug-class">Carbapenémicos (Betalactámicos)</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Se une a las PBPs, inhibiendo la transpeptidasa y bloqueando el entrecruzamiento de peptidoglicanos, provocando lisis y muerte bacteriana.</p>
-                    <p><strong>Mejora de Diseño:</strong> Estabilidad superior contra la dipeptidasa renal (no requiere cilastatina) y menor potencial de causar convulsiones que el Imipenem.</p>
-                    <p><strong>Enemigos:</strong> Pseudomonas aeruginosa, Acinetobacter y bacterias productoras de BLEE.</p>
-                    <p><strong>Batallas:</strong> DOC para Meningitis bacteriana (buena penetración a LCR) e infecciones intraabdominales complicadas.</p>
-                    <p><strong>Debilidad:</strong> Reacciones de hipersensibilidad (alergia cruzada parcial con penicilinas) y diarrea.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Requiere ajuste preciso en insuficiencia renal. IV exclusivo.
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">TICARCILINA</div>
+                        <div class="drug-class">Carboxipenicilinas</div>
+                        <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Inhibe la transpeptidasa y bloquea el entrecruzamiento de peptidoglicanos en la pared celular.</p>
+                            <p><strong>Mejora de Diseño:</strong> Grupo carboxilo mejora actividad contra Pseudomonas y Proteus.</p>
+                            <p><strong>Enemigos:</strong> Pseudomonas aeruginosa, Enterobacter y Proteus.</p>
+                            <p><strong>Batallas:</strong> Sepsis por Gram-negativos e infecciones nosocomiales graves.</p>
+                            <div class="restriction"><strong>Restricción:</strong> Solo parenteral. Riesgo de sobrecarga de sodio.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">ERTAPENEM</div>
-                <div class="drug-class">Carbapenémicos (Betalactámicos)</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Se une a las PBPs, inhibiendo la transpeptidasa y bloqueando el entrecruzamiento de peptidoglicanos, provocando lisis y muerte bacteriana.</p>
-                    <p><strong>Mejora de Diseño:</strong> Estructura que confiere una vida media larga (dosificación 1 vez al día). Pierde actividad contra Pseudomonas y Acinetobacter.</p>
-                    <p><strong>Enemigos:</strong> Enterobacteriaceae (E. coli, Klebsiella) y anaerobios.</p>
-                    <p><strong>Batallas:</strong> Infecciones intraabdominales y pélvicas; infecciones de piel y tejidos blandos.</p>
-                    <p><strong>Debilidad:</strong> Menor espectro que Imipenem/Meropenem; flebitis en el sitio de infusión.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> No usar si se sospecha Pseudomonas o Enterococcus. Ajuste renal necesario.
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">IMIPENEM / CILASTATINA</div>
+                        <div class="drug-class">Carbapenémicos</div>
+                        <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Inhibición de síntesis de pared celular y muerte por lisis.</p>
+                            <p><strong>Mejora de Diseño:</strong> Resistencia extrema a betalactamasas. Cilastatina evita degradación renal.</p>
+                            <p><strong>Enemigos:</strong> Pseudomonas, Acinetobacter y BLEE+.</p>
+                            <p><strong>Batallas:</strong> Infecciones nosocomiales graves y sepsis.</p>
+                            <div class="restriction"><strong>Restricción:</strong> Elevado riesgo de convulsiones. Ajuste renal.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">DORIPENEM</div>
-                <div class="drug-class">Carbapenémicos (Betalactámicos)</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Se une a las PBPs, inhibiendo la transpeptidasa y bloqueando el entrecruzamiento de peptidoglicanos, provocando lisis y muerte bacteriana.</p>
-                    <p><strong>Mejora de Diseño:</strong> Alta estabilidad contra betalactamasas y mayor potencia contra Pseudomonas aeruginosa comparado con otros carbapenémicos.</p>
-                    <p><strong>Enemigos:</strong> Pseudomonas aeruginosa multirresistente, Acinetobacter y Gram-negativos complejos.</p>
-                    <p><strong>Batallas:</strong> Neumonía asociada a ventilador e infecciones urinarias complicadas.</p>
-                    <p><strong>Debilidad:</strong> Cefalea, náuseas y riesgo de rash.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Solo administración IV. Requiere ajuste de dosis según aclaramiento de creatinina.
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">MEROPENEM</div>
+                        <div class="drug-class">Carbapenémicos</div>
+                        <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Inhibición de síntesis de pared celular y muerte por lisis.</p>
+                            <p><strong>Mejora de Diseño:</strong> No requiere cilastatina; menor riesgo de convulsiones que Imipenem.</p>
+                            <p><strong>Enemigos:</strong> Pseudomonas y bacterias productoras de BLEE.</p>
+                            <p><strong>Batallas:</strong> Meningitis bacteriana e infecciones intraabdominales.</p>
+                            <div class="restriction"><strong>Restricción:</strong> Requiere ajuste en insuficiencia renal.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">CEFALOSPORINAS 1G</div>
-                <div class="drug-class">Cefalexina, Cefadroxilo, Cefazolina</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Inhibe la transpeptidasa bloqueando el entrecruzamiento de peptidoglicano en la pared celular.</p>
-                    <p><strong>Mejora de Diseño:</strong> Prototipo con fuerte actividad contra Cocos Gram-positivos. La Cefazolina es el estándar de oro en profilaxis quirúrgica.</p>
-                    <p><strong>Enemigos:</strong> Streptococcus, Staphylococcus (MSSA), E. coli y Klebsiella.</p>
-                    <p><strong>Batallas:</strong> Infecciones de piel, ITU no complicadas y prevención de infecciones en cirugía.</p>
-                    <p><strong>Debilidad:</strong> Hipersensibilidad y dolor en sitio de inyección.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Riesgo de alergia cruzada con penicilinas (5-10%). Requieren ajuste renal.
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">CEFALOSPORINAS 2G</div>
-                <div class="drug-class">Cefuroxima, Cefaclor, Cefoxitina</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Inhibe la síntesis de la pared celular mediante la unión irreversible a las PBPs.</p>
-                    <p><strong>Mejora de Diseño:</strong> Mayor estabilidad ante betalactamasas y espectro ampliado hacia Gram-negativos y anaerobios (Cefoxitina).</p>
-                    <p><strong>Enemigos:</strong> H. influenzae, Moraxella catarrhalis y Bacteroides fragilis.</p>
-                    <p><strong>Batallas:</strong> Sinusitis, otitis media e infecciones respiratorias bajas.</p>
-                    <p><strong>Debilidad:</strong> Enfermedad del suero con Cefaclor (fiebre, artralgias).</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> No atraviesan barrera hematoencefálica (Inútiles en meningitis). Requieren ajuste renal.
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">ERTAPENEM</div>
+                        <div class="drug-class">Carbapenémicos</div>
+                        <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Inhibición de síntesis de pared celular y muerte por lisis.</p>
+                            <p><strong>Mejora de Diseño:</strong> Vida media larga (1 dosis/día). Pierde actividad contra Pseudomonas.</p>
+                            <p><strong>Enemigos:</strong> Enterobacteriaceae y anaerobios.</p>
+                            <p><strong>Batallas:</strong> Infecciones intraabdominales y de piel.</p>
+                            <div class="restriction"><strong>Restricción:</strong> No cubre Pseudomonas ni Acinetobacter.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">CEFALOSPORINAS 3G</div>
-                <div class="drug-class">Ceftriaxona, Ceftazidima, Cefixima</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Bloqueo de la síntesis de pared con alta afinidad por PBPs de Gram-negativos.</p>
-                    <p><strong>Mejora de Diseño:</strong> Gran capacidad de cruzar al SNC (SNC-Hero). Ceftazidima incluye el "módulo anti-Pseudomonas".</p>
-                    <p><strong>Enemigos:</strong> N. gonorrhoeae, Pseudomonas (Ceftazidima) y Serratia.</p>
-                    <p><strong>Batallas:</strong> Meningitis bacteriana, Gonorrea y Neumonía grave.</p>
-                    <p><strong>Debilidad:</strong> Barro biliar (Ceftriaxona) y diarrea por C. difficile.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Ceftriaxona es biliar: <strong>No requiere ajuste renal</strong>.
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">DORIPENEM</div>
+                        <div class="drug-class">Carbapenémicos</div>
+                        <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Inhibición de síntesis de pared celular y muerte por lisis.</p>
+                            <p><strong>Mejora de Diseño:</strong> Mayor potencia contra Pseudomonas aeruginosa comparado con otros del grupo.</p>
+                            <p><strong>Enemigos:</strong> Pseudomonas multirresistente y Gram-negativos complejos.</p>
+                            <p><strong>Batallas:</strong> Neumonía asociada a ventilador e ITU complicada.</p>
+                            <div class="restriction"><strong>Restricción:</strong> Solo IV. Ajuste según aclaramiento de creatinina.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">CEFEPIMA</div>
-                <div class="drug-class">Cefalosporina de 4ta Generación</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Inhibición de pared celular con estructura de "Zwitterion" para penetración ultra-rápida.</p>
-                    <p><strong>Mejora de Diseño:</strong> Resistente a betalactamasas cromosómicas (AmpC). Combina la potencia de 1G y 3G en una sola molécula.</p>
-                    <p><strong>Enemigos:</strong> Pseudomonas aeruginosa, Enterobacter y MSSA.</p>
-                    <p><strong>Batallas:</strong> Neutropenia febril e infecciones nosocomiales multirresistentes.</p>
-                    <p><strong>Debilidad:</strong> <strong>Neurotoxicidad grave:</strong> confusión, encefalopatía y convulsiones.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Ajuste renal estricto para evitar acumulación en SNC.
-                    </div>
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body"><div class="drug-name">CEFALOSPORINAS 1G</div><div class="drug-class">Cefalexina/Cefazolina</div><div class="embarazo seguro">EMBARAZO: B</div><p><strong>Batallas:</strong> Profilaxis quirúrgica y piel.</p></div>
                 </div>
-            </div>
-        </div>
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body"><div class="drug-name">CEFALOSPORINAS 2G</div><div class="drug-class">Cefuroxima/Cefoxitina</div><div class="embarazo seguro">EMBARAZO: B</div><p><strong>Batallas:</strong> Otitis y sinusitis.</p></div>
+                </div>
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body"><div class="drug-name">CEFALOSPORINAS 3G</div><div class="drug-class">Ceftriaxona/Ceftazidima</div><div class="embarazo seguro">EMBARAZO: B</div><p><strong>Batallas:</strong> Meningitis y Gonorrea.</p></div>
+                </div>
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body"><div class="drug-name">CEFEPIMA (4G)</div><div class="drug-class">Cefalosporina 4G</div><div class="embarazo seguro">EMBARAZO: B</div><p><strong>Debilidad:</strong> Neurotoxicidad.</p></div>
+                </div>
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body"><div class="drug-name">CEFTAROLINA (5G)</div><div class="drug-class">Cefalosporina 5G</div><div class="embarazo seguro">EMBARAZO: B</div><p><strong>Enemigos:</strong> MRSA.</p></div>
+                </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">CEFTAROLINA</div>
-                <div class="drug-class">Cefalosporina de 5ta Generación</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Único betalactámico diseñado con alta afinidad por la <strong>PBP2a</strong>.</p>
-                    <p><strong>Mejora de Diseño:</strong> Rompe la invulnerabilidad del Staphylococcus aureus resistente a meticilina (MRSA).</p>
-                    <p><strong>Enemigos:</strong> MRSA (S. aureus resistente) y S. pneumoniae resistente a penicilina.</p>
-                    <p><strong>Batallas:</strong> Infecciones complicadas de piel y tejidos blandos por MRSA.</p>
-                    <p><strong>Debilidad:</strong> Diarrea, náuseas y rash cutáneo.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Reservar para casos confirmados de resistencia. Requiere ajuste renal.
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">VANCOMICINA</div>
+                        <div class="drug-class">Glucopéptidos</div>
+                        <div class="embarazo precaucion">EMBARAZO: PRECAUCIÓN (B/C)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Se une a D-Ala-D-Ala inhibiendo translicosilación y elongación de pared.</p>
+                            <p><strong>Enemigos:</strong> MRSA y C. difficile.</p>
+                            <p><strong>Debilidad:</strong> Síndrome de Hombre Rojo y nefrotoxicidad.</p>
+                            <div class="restriction"><strong>Restricción:</strong> Monitoreo de niveles plasmáticos (valles).</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">VANCOMICINA</div>
-                <div class="drug-class">Glucopéptidos</div>
-                <div class="embarazo precaucion">EMBARAZO: PRECAUCIÓN (B/C)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Se une al extremo <strong>D-Ala-D-Ala</strong> del precursor del peptidoglicano, inhibiendo la translicosilación y el entrecruzamiento, bloqueando la elongación de la pared.</p>
-                    <p><strong>Mejora de Diseño:</strong> Mecanismo "anti-enzima" que evade la resistencia de las PBPs modificadas (como en MRSA). No se absorbe vía oral, ideal para acción local en colon.</p>
-                    <p><strong>Enemigos:</strong> MRSA (S. aureus resistente), Enterococos y Clostridium difficile.</p>
-                    <p><strong>Batallas:</strong> Endocarditis/Sepsis por MRSA y Colitis pseudomembranosa (vía oral).</p>
-                    <p><strong>Debilidad:</strong> <strong>"Síndrome del Hombre Rojo"</strong> (por infusión rápida), nefrotoxicidad y ototoxicidad.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Requiere monitoreo de niveles plasmáticos (valles) y ajuste estricto en falla renal.
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">TEICOPLANINA</div>
-                <div class="drug-class">Glucopéptidos</div>
-                <div class="embarazo precaucion">EMBARAZO: PRECAUCIÓN (B/C)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Inhibición de la síntesis de pared mediante el secuestro del precursor D-Ala-D-Ala, bloqueando la translicosilación.</p>
-                    <p><strong>Mejora de Diseño:</strong> Modificación lipofílica que le otorga una vida media extremadamente larga (45-70h), permitiendo <strong>una sola dosis al día</strong>.</p>
-                    <p><strong>Enemigos:</strong> MRSA, Enterococos y otros Gram-positivos resistentes.</p>
-                    <p><strong>Batallas:</strong> Infecciones graves de piel, huesos y endocarditis como alternativa a Vancomicina.</p>
-                    <p><strong>Debilidad:</strong> Rash cutáneo, alteraciones hematológicas y menor riesgo de "Hombre Rojo" que Vancomicina.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Excreción renal; requiere ajuste de dosis según aclaramiento de creatinina.
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">TEICOPLANINA</div>
+                        <div class="drug-class">Glucopéptidos</div>
+                        <div class="embarazo precaucion">EMBARAZO: PRECAUCIÓN (B/C)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Secuestro de D-Ala-D-Ala bloqueando translicosilación.</p>
+                            <p><strong>Mejora de Diseño:</strong> Vida media ultra larga (1 dosis/día).</p>
+                            <div class="restriction"><strong>Restricción:</strong> Ajuste renal necesario.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="card antipared">
-            <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
-            <div class="card-body">
-                <div class="drug-name">FOSFOMICINA</div>
-                <div class="drug-class">Análogo del Fosfoenolpiruvato</div>
-                <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
-                <div class="stats">
-                    <p><strong>Superpoder:</strong> Inhibidor citosólico que bloquea la enzima <strong>MurA</strong>, impidiendo la formación del ácido N-acetilmurámico (precursor básico del peptidoglicano).</p>
-                    <p><strong>Mejora de Diseño:</strong> Acción en etapa ultra-temprana. Al ser un antimetabolito único, no presenta resistencia cruzada con betalactámicos ni glucopéptidos.</p>
-                    <p><strong>Enemigos:</strong> E. coli, Enterococcus faecalis y Enterobacteriaceae (Klebsiella, Serratia).</p>
-                    <p><strong>Batallas:</strong> Elección para <strong>Cistitis aguda no complicada</strong> (dosis única) e infecciones por multirresistentes (sinergia).</p>
-                    <p><strong>Debilidad:</strong> Diarrea (frecuente), náuseas y vaginitis.</p>
-                    <div class="restriction">
-                        <strong>Restricción:</strong> Resistencia rápida en dosis múltiples; se prefiere esquema de dosis única en ITU. Eliminación renal excelente.
+
+                <div class="card antipared">
+                    <div class="card-top-header">ESCUADRA ANTIPARED CELULAR</div>
+                    <div class="card-body">
+                        <div class="drug-name">FOSFOMICINA</div>
+                        <div class="drug-class">Análogo Fosfoenolpiruvato</div>
+                        <div class="embarazo seguro">EMBARAZO: SEGURO (B)</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Bloquea MurA en fase citosólica temprana.</p>
+                            <p><strong>Batallas:</strong> Cistitis aguda (dosis única).</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </main>
+
+            </div> </div> </main>
 
     <script>
+        // Función para abrir/cerrar manual
+        function toggleGroup(id) {
+            const group = document.getElementById(id);
+            group.classList.toggle('is-hidden');
+        }
+
+        // Función de búsqueda inteligente
         function searchCards() {
             let input = document.getElementById('searchInput').value.toLowerCase();
             let cards = document.getElementsByClassName('card');
+            let groups = document.getElementsByClassName('group-content');
+
             for (let i = 0; i < cards.length; i++) {
                 let text = cards[i].innerText.toLowerCase();
-                cards[i].style.display = text.includes(input) ? "" : "none";
+                if (text.includes(input)) {
+                    cards[i].style.display = "";
+                    // Si el buscador tiene texto, abrimos el grupo padre automáticamente
+                    if (input.length > 0) {
+                        cards[i].parentElement.classList.remove('is-hidden');
+                    }
+                } else {
+                    cards[i].style.display = "none";
+                }
             }
         }
     </script>
