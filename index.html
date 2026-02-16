@@ -645,7 +645,49 @@
                 </div>
 
             </div> </div> 
-   
+<div class="group-container">
+            <div class="group-header" style="background-color: var(--color-metabolitos)" onclick="toggleGroup('contentSulfas')">
+                BLOQUEO ANTIMETABOLITOS (SULFAS) <span>▼</span>
+            </div>
+
+            <div class="group-content is-hidden" id="contentSulfas">
+                
+                <div class="card metabolitos">
+                    <div class="card-top-header">BLOQUEO ANTIMETABOLITOS</div>
+                    <div class="card-body">
+                        <div class="drug-name" style="color: var(--color-metabolitos)">TMP / SMZ</div>
+                        <div class="drug-class">Sulfonamidas + Inhibidor de Reductasa</div>
+                        <div class="embarazo contraindicado">EMBARAZO: EVITAR / CONTRAINDICADO</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> <strong>Bloqueo Secuencial:</strong> SMZ inhibe la dihidropteroato sintasa y TMP la dihidrofolato reductasa, asfixiando la síntesis de Ácido Fólico.</p>
+                            <p><strong>Mejora de Diseño:</strong> La combinación genera sinergia que transforma dos bacteriostáticos en una fuerza <strong>Bactericida</strong>.</p>
+                            <p><strong>Enemigos:</strong> Pneumocystis jirovecii, MRSA comunitario y E. coli.</p>
+                            <p><strong>Batallas:</strong> DOC para Neumonía por Pneumocystis (PCP), ITUs e infecciones de piel por MRSA.</p>
+                            <p><strong>Debilidad:</strong> Hiperpotasemia, mielosupresión y riesgo de Stevens-Johnson.</p>
+                            <div class="restriction"><strong>Restricción:</strong> Evitar en 1er/3er trimestre (Kernicterus). Ajuste renal necesario. Potencia a la Warfarina.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card metabolitos">
+                    <div class="card-top-header">BLOQUEO ANTIMETABOLITOS</div>
+                    <div class="card-body">
+                        <div class="drug-name" style="color: var(--color-metabolitos)">SULFADIAZINA</div>
+                        <div class="drug-class">Sulfonamidas</div>
+                        <div class="embarazo contraindicado">EMBARAZO: EVITAR</div>
+                        <div class="stats">
+                            <p><strong>Superpoder:</strong> Compite con el PABA inhibiendo la enzima dihidropteroato sintasa bacteriana.</p>
+                            <p><strong>Mejora de Diseño:</strong> Frecuentemente escoltada por Pirimetamina para un bloqueo secuencial letal contra protozoos.</p>
+                            <p><strong>Enemigos:</strong> Toxoplasma gondii, Nocardia y bacterias en quemaduras (forma de plata).</p>
+                            <p><strong>Batallas:</strong> Elección para Toxoplasmosis aguda y prevención de sepsis en quemados (tópico).</p>
+                            <p><strong>Debilidad:</strong> <strong>Cristaluria</strong> (precipitación en orina ácida), anemia hemolítica (en déficit de G6PD).</p>
+                            <div class="restriction"><strong>Restricción:</strong> Obligatorio hidratar bien al paciente y alcalinizar la orina. Riesgo de Kernicterus neonatal.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> </div> 
+    
     <script>
         // Función para abrir/cerrar manual
         function toggleGroup(id) {
