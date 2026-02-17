@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmakón UNO | El Juego</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #game-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        #case-display { background: #fff; padding: 20px; border-radius: 15px; border: 3px dashed #2c3e50; margin-bottom: 20px; min-height: 100px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: bold; }
+        #player-hand { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px; }
+        .card-mini { width: 140px; padding: 10px; border-radius: 8px; cursor: pointer; color: white; font-size: 0.8rem; font-weight: bold; transition: transform 0.2s; border: 2px solid rgba(0,0,0,0.1); }
+        .card-mini:hover { transform: scale(1.05); }
+        #deck-controls { margin: 20px 0; }
+        .btn { padding: 10px 20px; font-size: 1rem; cursor: pointer; border-radius: 5px; border: none; background: #2c3e50; color: white; }
+        .btn-draw { background: #e67e22; }
+        #score-board { margin-bottom: 10px; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FARMAKÓN UNO</h1>
+        <p>¡Descarta todos tus antibióticos para ganar!</p>
+    </header>
+
+    <div id="game-container">
+        <div id="score-board">Cartas restantes: <span id="cards-left">0</span></div>
+        
+        <div id="case-display">
+            Cargando primer caso...
+        </div>
+
+        <div id="deck-controls">
+            <button class="btn btn-draw" onclick="drawCard()">ROBAR CARTA (+1)</button>
+        </div>
+
+        <div id="player-hand">
+            </div>
+    </div>
+
+    <script>
+        // Traemos los datos de las cartas (Simulado de tu base de datos)
+        const allAntibiotics = [
+            { name: "PENICILINA G", group: "antipared", enemies: ["treponema", "sífilis", "streptococcus", "gangrena"] },
+            { name: "AMOXICILINA", group: "antipared", enemies: ["h. pylori", "pneumoniae", "sinusitis", "otitis"] },
+            { name: "AMPICILINA", group: "antipared", enemies: ["listeria", "meningitis", "enterococcus"] },
+            { name: "CEFAZOLINA", group: "antipared", enemies: ["cirugía", "profilaxis", "staphylococcus"] },
+            { name: "CEFTAROLINA", group: "antipared", enemies: ["mrsa", "piel"] },
+            { name: "VANCOMICINA", group: "antipared", enemies: ["mrsa", "c. difficile", "colitis"] },
+            { name: "FOSFOMICINA", group: "antipared", enemies: ["cistitis", "itu", "dosis única"] },
+            { name: "METRONIDAZOL", group: "adn-ruptura", enemies: ["anaerobios", "c. difficile", "giardia", "amebiasis", "tricomona"] },
+            { name: "AZITROMICINA", group: "interferencia-50s", enemies: ["mycoplasma", "clamidia", "atípica"] },
+            { name: "LINEZOLID", group: "interferencia-50s", enemies: ["mrsa", "vre", "nosocomial"] },
+            { name: "DOXICICLINA", group: "bloqueo-30s", enemies: ["lyme", "mycoplasma", "malaria"] },
+            { name: "GENTAMICINA", group: "bloqueo-30s", enemies: ["sepsis", "gram-negativos", "endocarditis"] },
+            { name: "CIPROFLOXACINO", group: "adn-girasa", enemies: ["pseudomonas", "prostatitis", "ántrax"] },
+            { name: "NITROFURANTOÍNA", group: "adn-ruptura", enemies: ["cistitis", "itu", "e. coli"] }
+        ];
+
+        const cases = [
+            { text: "Paciente con Sífilis primaria (Treponema pallidum).", key: "sífilis" },
+            { text: "Doncella con Cistitis aguda que busca tratamiento de una sola dosis.", key: "dosis única" },
+            { text: "Soldado con herida infectada por MRSA.", key: "mrsa" },
+            { text: "Diarrea profusa tras uso de antibióticos (C. difficile).", key: "c. difficile" },
+            { text: "Neumonía atípica por Mycoplasma pneumoniae.", key: "mycoplasma" },
+            { text: "Infección por parásitos (Giardia lamblia).", key: "giardia" },
+            { text: "Meningitis neonatal por Listeria monocytogenes.", key: "listeria" }
+        ];
+
+        let playerHand = [];
+        let currentCase = {};
+
+        function initGame() {
+            // Repartir 7 cartas iniciales
+            for(let i=0; i<7; i++) {
+                playerHand.push(allAntibiotics[Math.floor(Math.random() * allAntibiotics.length)]);
+            }
+            nextCase();
+            renderHand();
+        }
+
+        function nextCase() {
+            currentCase = cases[Math.floor(Math.random() * cases.length)];
+            document.getElementById('case-display').innerText = currentCase.text;
+        }
+
+        function renderHand() {
+            const handDiv = document.getElementById('player-hand');
+            handDiv.innerHTML = '';
+            playerHand.forEach((card, index) => {
+                const cardEl = document.createElement('div');
+                cardEl.className = `card-mini ${card.group}`;
+                cardEl.style.backgroundColor = `var(--color-${card.group})`;
+                cardEl.innerText = card.name;
+                cardEl.onclick = () => playCard(index);
+                handDiv.appendChild(cardEl);
+            });
+            document.getElementById('cards-left').innerText = playerHand.length;
+            if(playerHand.length === 0) alert("¡Felicidades, ganaste el Farmakón UNO!");
+        }
+
+        function playCard(index) {
+            const card = playerHand[index];
+            if(card.enemies.includes(currentCase.key)) {
+                playerHand.splice(index, 1);
+                nextCase();
+            } else {
+                alert("¡Error! Ese antibiótico no es el indicado. Robas 2 cartas.");
+                drawCard(); drawCard();
+            }
+            renderHand();
+        }
+
+        function drawCard() {
+            playerHand.push(allAntibiotics[Math.floor(Math.random() * allAntibiotics.length)]);
+            renderHand();
+        }
+
+        initGame();
+    </script>
+</body>
+</html>
